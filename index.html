@@ -1,0 +1,1036 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#faf8ff">
+<meta name="description" content="Індивідуальні заняття з англійської мови від A1 до B2+ та підготовка до НМТ.">
+<title>English Bloom — Англійська та підготовка до НМТ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #faf8ff;
+    --white: #fff;
+    --ink: #29233e;
+    --muted: #807991;
+    --purple: #7859cf;
+    --purple-dark: #6042b8;
+    --lavender: #eee7ff;
+    --pink: #ffe8ed;
+    --green: #e8f6ed;
+    --line: #e9e4f2;
+    --shadow: 0 15px 45px rgba(69,45,122,.065);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    background: var(--bg);
+    font-family: "DM Sans", sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+}
+a { text-decoration: none; color: inherit; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.container {
+    width: min(1170px, calc(100% - 44px));
+    margin: auto;
+}
+.demo-bar {
+    padding: 9px 16px;
+    background: #eee8ff;
+    text-align: center;
+    color: #6b53a9;
+    font-size: 11px;
+    font-weight: 700;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: rgba(250,248,255,.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+}
+.nav {
+    min-height: 77px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.brand {
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: -1.4px;
+    white-space: nowrap;
+}
+.brand span { color: var(--purple); }
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav-links a {
+    font-size: 12px;
+    font-weight: 700;
+    color: #696176;
+}
+.nav-links a:hover { color: var(--purple); }
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding: 16px 23px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 800;
+    border: none;
+    transition: .2s;
+    text-align: center;
+}
+.btn-primary {
+    color: #fff;
+    background: var(--purple);
+    box-shadow: 0 9px 23px #7859cf25;
+}
+.btn-primary:hover {
+    background: var(--purple-dark);
+    transform: translateY(-2px);
+}
+.btn-outline {
+    background: white;
+    color: var(--purple);
+    border: 1px solid #ded3f5;
+}
+.btn-outline:hover {
+    border-color: var(--purple);
+    transform: translateY(-2px);
+}
+.menu-btn {
+    display: none;
+    background: var(--lavender);
+    border: 0;
+    padding: 9px 12px;
+    color: var(--purple);
+    border-radius: 10px;
+    font-size: 23px;
+}
+.hero {
+    overflow: hidden;
+    padding: 95px 0 105px;
+    background:
+        radial-gradient(ellipse at 85% 15%, #f0e7ff, transparent 47%),
+        radial-gradient(ellipse at 10% 90%, #fff0ef, transparent 45%),
+        var(--bg);
+}
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.12fr .88fr;
+    align-items: center;
+    gap: 58px;
+}
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--purple);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.kicker::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #bf9bec;
+    border-radius: 50%;
+}
+h1, h2, h3 { font-family: Manrope, sans-serif; }
+h1, h2 { letter-spacing: -2px; }
+h1 {
+    font-size: clamp(40px, 5.2vw, 68px);
+    line-height: 1.15;
+    margin: 25px 0;
+    font-weight: 800;
+}
+h1 em, h2 em {
+    font-style: normal;
+    color: var(--purple);
+}
+.hero-copy > p {
+    color: var(--muted);
+    max-width: 480px;
+    font-size: 15px;
+    line-height: 1.9;
+}
+.hero-buttons {
+    margin-top: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+.hero-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 43px;
+}
+.hero-benefits span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #776c8a;
+    font-weight: 700;
+}
+.check-icon {
+    background: var(--lavender);
+    color: var(--purple);
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: inline-grid;
+    place-items: center;
+}
+.hero-art {
+    position: relative;
+    min-height: 460px;
+    display: grid;
+    place-items: center;
+}
+.hero-shape {
+    width: min(385px, 100%);
+    aspect-ratio: 1/1.11;
+    background: linear-gradient(145deg, #d7c6fa, #f4dceb 70%, #ffe9d9);
+    border-radius: 46% 46% 25% 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transform: rotate(3deg);
+}
+.hero-shape .illustration { font-size: 105px; }
+.hero-shape strong {
+    font-family: Manrope, sans-serif;
+    color: #654aad;
+    font-size: 27px;
+    margin-top: 17px;
+    transform: rotate(-3deg);
+}
+.floating {
+    position: absolute;
+    padding: 15px 19px;
+    border-radius: 14px;
+    background: white;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+    font-size: 12px;
+    font-weight: 800;
+}
+.floating.one { left: 0; top: 65px; transform: rotate(-7deg); }
+.floating.two { right: 0; bottom: 65px; transform: rotate(6deg); }
+.floating b { color: var(--purple); }
+.section { padding: 100px 0; }
+.heading {
+    max-width: 720px;
+    margin-bottom: 45px;
+}
+.heading.center {
+    text-align: center;
+    margin-inline: auto;
+}
+h2 {
+    font-size: clamp(34px, 4vw, 49px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+.heading p {
+    color: var(--muted);
+    line-height: 1.85;
+    font-size: 14px;
+}
+.offer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 23px;
+}
+.offer {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: 23px;
+    padding: 37px;
+    background: white;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+.offer.highlight {
+    background: linear-gradient(140deg,#f1eaff,#fff8fc);
+    border-color: #dfd1f7;
+}
+.offer-icon {
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    background: var(--lavender);
+    border-radius: 20px;
+    font-size: 30px;
+}
+.offer:nth-child(2) .offer-icon { background: #ffe8ee; }
+.offer h3 { font-size: 24px; margin: 28px 0 12px; }
+.offer p {
+    color: var(--muted);
+    line-height: 1.85;
+    font-size: 14px;
+}
+.offer ul {
+    list-style: none;
+    margin: 24px 0;
+    padding: 0;
+    display: grid;
+    gap: 13px;
+}
+.offer li {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    align-items: flex-start;
+}
+.offer li::before {
+    content: "✓";
+    color: var(--purple);
+    font-weight: 800;
+}
+.offer a {
+    display: inline-flex;
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--purple);
+    font-weight: 800;
+}
+.level-section { background: #f2edfa; }
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0,1fr));
+    gap: 12px;
+}
+.level {
+    text-align: left;
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 17px;
+    padding: 25px 17px;
+    transition: .2s;
+    min-height: 170px;
+}
+.level:hover, .level.selected {
+    border-color: var(--purple);
+    transform: translateY(-3px);
+}
+.level strong {
+    display: block;
+    font-size: 32px;
+    color: var(--purple);
+    font-family: Manrope, sans-serif;
+    margin-bottom: 11px;
+}
+.level span {
+    display: block;
+    color: var(--ink);
+    font-weight: 800;
+    font-size: 12px;
+}
+.level small {
+    display: block;
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+.level-detail {
+    background: white;
+    margin-top: 20px;
+    padding: 25px 30px;
+    border-radius: 17px;
+    border: 1px solid var(--line);
+}
+.level-detail strong {
+    font-size: 16px;
+    color: var(--purple);
+}
+.level-detail p {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+.nmt-section {
+    background: #fff;
+}
+.nmt-layout {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 80px;
+    align-items: center;
+}
+.nmt-copy p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+.nmt-points {
+    display: grid;
+    gap: 17px;
+    margin: 30px 0;
+}
+.nmt-point {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+.nmt-point > span {
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    color: var(--purple);
+    background: var(--lavender);
+    border-radius: 11px;
+    font-weight: 800;
+}
+.nmt-point strong {
+    display: block;
+    font-size: 14px;
+    margin: 0 0 6px;
+}
+.nmt-point p { margin: 0; font-size: 12px; }
+.nmt-card {
+    background: linear-gradient(145deg,#785ad0,#aa8ae0);
+    border-radius: 30px;
+    min-height: 450px;
+    padding: 45px 35px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.nmt-card > span {
+    color: #e5dafa;
+    letter-spacing: 3px;
+    font-size: 11px;
+    font-weight: 800;
+}
+.nmt-card > strong {
+    font-family: Manrope, sans-serif;
+    font-size: clamp(85px,12vw,135px);
+    letter-spacing: -10px;
+    line-height: 1.4;
+}
+.nmt-card p {
+    color: #f2eaff;
+    line-height: 1.8;
+    max-width: 285px;
+    margin: 0 auto;
+}
+.nmt-mini {
+    margin-top: 30px;
+    background: #ffffff25;
+    padding: 13px 19px;
+    border: 1px solid #ffffff55;
+    border-radius: 30px;
+    font-size: 12px;
+}
+.about-section { background: #f5f0fb; }
+.about-layout {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    align-items: center;
+    gap: 85px;
+}
+.about-photo {
+    aspect-ratio: 1/1.04;
+    background: linear-gradient(145deg,#d8c7f6,#f7dce5);
+    border-radius: 34px;
+    display: grid;
+    place-content: center;
+    gap: 18px;
+    text-align: center;
+    padding: 30px;
+}
+.about-photo div { font-size: 95px; }
+.about-photo span {
+    color: #6b50ad;
+    font-weight: 800;
+    font-size: 13px;
+}
+.about-text p {
+    color: var(--muted);
+    line-height: 1.95;
+    font-size: 14px;
+}
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 26px;
+}
+.about-tags span {
+    background: white;
+    padding: 11px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    color: #6c5994;
+    font-weight: 700;
+}
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 33px;
+}
+.step {
+    border-top: 1px solid #ddd3ed;
+    padding-top: 22px;
+}
+.step-number {
+    color: #bfade8;
+    font-size: 35px;
+    font-weight: 800;
+}
+.step h3 { margin: 18px 0 10px; }
+.step p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+.faq-section { background: #f1edfa; }
+.faq-list { max-width: 850px; margin: auto; }
+.faq-list details {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 13px;
+    margin-bottom: 12px;
+}
+.faq-list summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 23px 25px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after {
+    content: "+";
+    font-size: 23px;
+    color: var(--purple);
+}
+.faq-list details[open] summary::after { content: "−"; }
+.faq-list details p {
+    padding: 0 25px 22px;
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 13px;
+}
+.contact-section { padding: 95px 0; }
+.contact-box {
+    background: linear-gradient(115deg,#684bbb,#a284e0);
+    color: white;
+    text-align: center;
+    border-radius: 28px;
+    padding: 75px 25px;
+}
+.contact-box h2 {
+    max-width: 740px;
+    margin: 18px auto;
+}
+.contact-box h2 em { color: #e6d9ff; }
+.contact-box p { color: #eee4ff; line-height: 1.8; }
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 30px;
+}
+.contact-actions .btn {
+    background: white;
+    color: #684bbb;
+}
+.contact-actions .btn:last-child {
+    background: #ffffff22;
+    border: 1px solid #ffffff66;
+    color: white;
+}
+footer { border-top: 1px solid var(--line); padding: 33px 0; }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.footer-content p { color: var(--muted); font-size: 12px; }
+.toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translate(-50%,20px);
+    padding: 14px 21px;
+    border-radius: 12px;
+    background: #29213e;
+    color: white;
+    z-index: 100;
+    font-size: 13px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
+    text-align: center;
+    max-width: calc(100vw - 30px);
+}
+.toast.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%,0);
+}
+:focus-visible { outline: 3px solid #a18fe1; outline-offset: 3px; }
+@media(max-width: 970px) {
+    .nav-links { gap: 15px; }
+    .hero-grid { gap: 25px; }
+    .nmt-layout, .about-layout { gap: 35px; }
+}
+@media(max-width: 770px) {
+    .nav { min-height: 69px; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 22px;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: var(--shadow);
+    }
+    .nav-links.open { display: flex; }
+    .nav > .btn { margin-left: auto; padding: 12px; }
+    .menu-btn { display: block; }
+    .hero { padding: 65px 0; }
+    .hero-grid, .nmt-layout, .about-layout { grid-template-columns: 1fr; }
+    .hero-art { min-height: 365px; }
+    .hero-shape { max-width: 310px; }
+    .floating.one { left: 3%; }
+    .floating.two { right: 3%; }
+    .offer-grid { grid-template-columns: 1fr; }
+    .level-grid { grid-template-columns: repeat(3,1fr); }
+    .steps { grid-template-columns: 1fr; }
+    .about-photo { max-width: 440px; width: 100%; margin: auto; }
+    .section { padding: 72px 0; }
+    .nmt-card { min-height: 330px; }
+}
+@media(max-width: 480px) {
+    .container { width: calc(100% - 30px); }
+    .brand { font-size: 19px; }
+    .nav > .btn { font-size: 11px; padding: 11px; }
+    h1 { font-size: 42px; }
+    .hero-art { min-height: 310px; }
+    .hero-shape { max-width: 265px; }
+    .hero-shape .illustration { font-size: 75px; }
+    .hero-shape strong { font-size: 20px; }
+    .floating { padding: 11px; font-size: 10px; }
+    .level-grid { grid-template-columns: repeat(2,1fr); }
+    .level { min-height: 150px; }
+    .offer { padding: 27px; }
+    .contact-actions { flex-direction: column; }
+    .footer-content { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="demo-bar">
+    Демоверсія сайту · ім'я, умови занять та контакти погоджуються з викладачкою
+</div>
+
+<header>
+    <div class="container nav">
+        <a class="brand" href="#home">english<span>bloom.</span></a>
+        <nav class="nav-links" id="navLinks">
+            <a href="#programs">Програми</a>
+            <a href="#levels">Рівні</a>
+            <a href="#nmt">Підготовка до НМТ</a>
+            <a href="#about">Про мене</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-primary" href="#contact">Записатися ↗</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Відкрити меню" aria-expanded="false" type="button">☰</button>
+    </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <span class="kicker">Твій шлях до впевненої англійської</span>
+            <h1>Англійська<br>від A1 до <em>B2+</em><br>та підготовка<br>до <em>НМТ.</em></h1>
+            <p>
+                Індивідуальні заняття з англійської, на яких
+                можна розвивати знання у власному темпі,
+                розбирати складні теми та готуватися до іспитів.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Записатися на заняття ↗</a>
+                <a href="#programs" class="btn btn-outline">Переглянути програми</a>
+            </div>
+            <div class="hero-benefits">
+                <span><span class="check-icon">✓</span> Рівні A1–B2+</span>
+                <span><span class="check-icon">✓</span> Підготовка до НМТ</span>
+            </div>
+        </div>
+        <div class="hero-art">
+            <div class="hero-shape">
+                <div class="illustration">📚✨</div>
+                <strong>Your English journey</strong>
+            </div>
+            <div class="floating one">💜 English can be fun!</div>
+            <div class="floating two"><b>A1 → B2+</b> Keep growing!</div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="programs">
+    <div class="container">
+        <div class="heading">
+            <span class="kicker">Обери свій напрям</span>
+            <h2>Англійська під <em>твої цілі.</em></h2>
+            <p>Вивчення мови та підготовка до іспиту потребують різного підходу. Обери програму, яка відповідає твоїй меті.</p>
+        </div>
+        <div class="offer-grid">
+            <article class="offer highlight">
+                <div class="offer-icon">🎓</div>
+                <h3>Підготовка до НМТ</h3>
+                <p>Системна робота з темами, які потрібні для складання НМТ з англійської мови.</p>
+                <ul>
+                    <li>Граматичні теми та лексика</li>
+                    <li>Читання та розуміння текстів</li>
+                    <li>Завдання у форматі НМТ</li>
+                    <li>Розбір помилок і складних тем</li>
+                </ul>
+                <a href="#nmt">Детальніше про підготовку ↗</a>
+            </article>
+            <article class="offer">
+                <div class="offer-icon">💬</div>
+                <h3>Загальна англійська A1–B2+</h3>
+                <p>Поступовий розвиток мовних навичок відповідно до поточного рівня та цілей учня.</p>
+                <ul>
+                    <li>Розширення словникового запасу</li>
+                    <li>Зрозумілі пояснення граматики</li>
+                    <li>Практика мовлення</li>
+                    <li>Завдання відповідно до рівня</li>
+                </ul>
+                <a href="#levels">Переглянути рівні ↗</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section level-section" id="levels">
+    <div class="container">
+        <div class="heading center">
+            <span class="kicker">Твій рівень англійської</span>
+            <h2>Від перших слів до <em>впевненості.</em></h2>
+            <p>Натисни на рівень, щоб дізнатися, які навички зазвичай на ньому розвивають.</p>
+        </div>
+        <div class="level-grid">
+            <button type="button" class="level selected" data-level="A1" aria-pressed="true">
+                <strong>A1</strong><span>Beginner</span><small>Перші кроки</small>
+            </button>
+            <button type="button" class="level" data-level="A2" aria-pressed="false">
+                <strong>A2</strong><span>Elementary</span><small>Базова англійська</small>
+            </button>
+            <button type="button" class="level" data-level="B1" aria-pressed="false">
+                <strong>B1</strong><span>Intermediate</span><small>Самостійність</small>
+            </button>
+            <button type="button" class="level" data-level="B2" aria-pressed="false">
+                <strong>B2</strong><span>Upper-intermediate</span><small>Впевнене спілкування</small>
+            </button>
+            <button type="button" class="level" data-level="B2+" aria-pressed="false">
+                <strong>B2+</strong><span>Upper-intermediate+</span><small>Поглиблена практика</small>
+            </button>
+        </div>
+        <div class="level-detail" aria-live="polite">
+            <strong id="levelTitle">A1 — Beginner</strong>
+            <p id="levelText">Основи граматики, знайомство з найуживанішими словами та побудова перших простих речень.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section nmt-section" id="nmt">
+    <div class="container nmt-layout">
+        <div class="nmt-copy">
+            <span class="kicker">Підготовка до важливого іспиту</span>
+            <h2>НМТ з англійської?<br><em>Підготуйся системно.</em></h2>
+            <p>
+                Підготовка до НМТ — це не лише повторення правил.
+                Важливо навчитися працювати із завданнями,
+                розуміти тексти та бачити власні слабкі місця.
+            </p>
+            <div class="nmt-points">
+                <div class="nmt-point">
+                    <span>01</span>
+                    <div>
+                        <strong>Визначення поточного рівня</strong>
+                        <p>З'ясовуємо, які теми потребують найбільшої уваги.</p>
+                    </div>
+                </div>
+                <div class="nmt-point">
+                    <span>02</span>
+                    <div>
+                        <strong>Робота з граматикою та лексикою</strong>
+                        <p>Повторюємо основні теми та тренуємо їх у завданнях.</p>
+                    </div>
+                </div>
+                <div class="nmt-point">
+                    <span>03</span>
+                    <div>
+                        <strong>Практика екзаменаційних завдань</strong>
+                        <p>Розбираємо типові труднощі та аналізуємо помилки.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="btn btn-primary" href="#contact">Дізнатися про підготовку ↗</a>
+        </div>
+        <div class="nmt-card">
+            <span>YOUR EXAM PREPARATION</span>
+            <strong>НМТ</strong>
+            <p>Знання, практика та впевненість у власних силах.</p>
+            <div class="nmt-mini">Grammar ✦ Vocabulary ✦ Reading</div>
+        </div>
+    </div>
+</section>
+
+<section class="section about-section" id="about">
+    <div class="container about-layout">
+        <div class="about-photo">
+            <div>👩‍🏫</div>
+            <span>Тут буде фото викладачки</span>
+        </div>
+        <div class="about-text">
+            <span class="kicker">Давай знайомитись</span>
+            <h2>Hi! Я твоя майбутня <em>викладачка.</em></h2>
+            <p>
+                Тут буде справжнє ім'я репетиторки та
+                розповідь про її досвід, освіту й підхід до навчання.
+            </p>
+            <p>
+                Мета цього розділу — допомогти майбутнім учням
+                познайомитися з викладачкою ще до першого заняття.
+                Інформація буде додана після узгодження.
+            </p>
+            <div class="about-tags">
+                <span>♡ Англійська A1–B2+</span>
+                <span>✦ Підготовка до НМТ</span>
+                <span>☀ Індивідуальні заняття</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="steps">
+    <div class="container">
+        <div class="heading center">
+            <span class="kicker">Усе просто</span>
+            <h2>Як почати <em>заняття?</em></h2>
+            <p>Три невеликі кроки до початку навчання.</p>
+        </div>
+        <div class="steps">
+            <article class="step">
+                <span class="step-number">01</span>
+                <h3>Напиши викладачці</h3>
+                <p>Зв'яжися через Instagram або Telegram та розкажи, яка твоя мета.</p>
+            </article>
+            <article class="step">
+                <span class="step-number">02</span>
+                <h3>Обговоріть деталі</h3>
+                <p>Уточніть рівень, формат, вартість занять і зручний розклад.</p>
+            </article>
+            <article class="step">
+                <span class="step-number">03</span>
+                <h3>Починай навчання</h3>
+                <p>Після узгодження деталей можна розпочати роботу над своїми цілями.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section faq-section" id="faq">
+    <div class="container">
+        <div class="heading center">
+            <span class="kicker">Часті запитання</span>
+            <h2>Відповіді на <em>твої запитання.</em></h2>
+        </div>
+        <div class="faq-list">
+            <details>
+                <summary>Чи можна почати з нульового рівня?</summary>
+                <p>Викладачка працює з рівнями A1–B2+. Якщо ти тільки починаєш вивчати англійську, уточни формат занять для початківців.</p>
+            </details>
+            <details>
+                <summary>Чи є окрема підготовка до НМТ?</summary>
+                <p>Так, серед напрямів викладачки є підготовка до НМТ з англійської мови. Деталі програми та розклад можна уточнити особисто.</p>
+            </details>
+            <details>
+                <summary>Скільки коштує одне заняття?</summary>
+                <p>Вартість уточнюється у викладачки. Після погодження її можна буде розмістити на сайті.</p>
+            </details>
+            <details>
+                <summary>Чи проводяться заняття онлайн?</summary>
+                <p>Формат проведення занять буде уточнено та додано до остаточної версії сайту.</p>
+            </details>
+            <details>
+                <summary>Як записатися?</summary>
+                <p>Для запису можна написати викладачці в Instagram або Telegram, коли її контакти будуть додані на сайт.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="contact-box">
+            <span class="kicker" style="color:#eee0ff">START YOUR ENGLISH JOURNEY</span>
+            <h2>Готовий зробити крок до <em>кращої англійської?</em></h2>
+            <p>Обери свій напрям та напиши викладачці, щоб обговорити заняття.</p>
+            <div class="contact-actions">
+                <button class="btn contact-btn" type="button" data-platform="instagram">◎ Написати в Instagram ↗</button>
+                <button class="btn contact-btn" type="button" data-platform="telegram">✈ Написати в Telegram ↗</button>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <a class="brand" href="#home">english<span>bloom.</span></a>
+        <p>© 2026 · Демоверсія персонального сайту репетитора</p>
+    </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const CONTACTS = {
+    instagram: "",
+    telegram: ""
+};
+
+const LEVELS = {
+    "A1": {
+        title: "A1 — Beginner",
+        text: "Основи граматики, знайомство з найуживанішими словами та побудова перших простих речень."
+    },
+    "A2": {
+        title: "A2 — Elementary",
+        text: "Розширення словникового запасу, розмови на повсякденні теми та робота з базовими граматичними структурами."
+    },
+    "B1": {
+        title: "B1 — Intermediate",
+        text: "Висловлення власних думок, читання текстів, розвиток мовлення та впевненіше використання граматики."
+    },
+    "B2": {
+        title: "B2 — Upper-intermediate",
+        text: "Робота зі складнішими текстами, аргументація думок, активне використання лексики та поглиблена граматика."
+    },
+    "B2+": {
+        title: "B2+ — Upper-intermediate+",
+        text: "Поглиблення мовних навичок, робота з нюансами лексики та граматики, розвиток точності й природності мовлення."
+    }
+};
+
+const menuButton = document.getElementById("menuBtn");
+const navigation = document.getElementById("navLinks");
+const toast = document.getElementById("toast");
+let toastTimeout;
+
+function showToast(message) {
+    clearTimeout(toastTimeout);
+    toast.textContent = message;
+    toast.classList.add("visible");
+    toastTimeout = setTimeout(() => {
+        toast.classList.remove("visible");
+    }, 3500);
+}
+
+menuButton.addEventListener("click", () => {
+    const open = navigation.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(open));
+});
+
+navigation.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        navigation.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+    });
+});
+
+document.querySelectorAll(".level").forEach(button => {
+    button.addEventListener("click", () => {
+        const level = button.dataset.level;
+        const data = LEVELS[level];
+
+        document.querySelectorAll(".level").forEach(item => {
+            const selected = item === button;
+            item.classList.toggle("selected", selected);
+            item.setAttribute("aria-pressed", String(selected));
+        });
+
+        document.getElementById("levelTitle").textContent = data.title;
+        document.getElementById("levelText").textContent = data.text;
+    });
+});
+
+document.querySelectorAll(".contact-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        const platform = button.dataset.platform;
+        const link = CONTACTS[platform];
+
+        if (!link) {
+            showToast("Демоверсія: контакти будуть додані після погодження.");
+            return;
+        }
+
+        try {
+            const url = new URL(link);
+            const allowedHost = platform === "instagram"
+                ? "instagram.com"
+                : "t.me";
+
+            if (
+                url.protocol !== "https:" ||
+                ![allowedHost, "www." + allowedHost].includes(url.hostname.toLowerCase())
+            ) {
+                throw new Error("Invalid contact link");
+            }
+
+            window.open(url.href, "_blank", "noopener,noreferrer");
+        } catch {
+            showToast("Посилання на контакт вказано неправильно.");
+        }
+    });
+});
+</script>
+</body>
+</html>
